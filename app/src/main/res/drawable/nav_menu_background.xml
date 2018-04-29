@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:width="500dp"
+        android:height="700dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/lightESPGrey" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/esp_logo_black_transparent"
+        android:gravity="bottom|center"
+        android:bottom="10dp"
+        android:width="@dimen/nav_menu_bg_size"
+        android:height="@dimen/nav_menu_bg_size"/>
+</layer-list >

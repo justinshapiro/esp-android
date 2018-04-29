@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="465dp"
+    android:background="@drawable/rounded_border_view"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:indeterminateTint="@color/espRed"
+            android:indeterminateTintMode="multiply"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.518" />
+
+        <ImageView
+            android:id="@+id/banner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/image_view_content_description"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/header_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/map_banner" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/header_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_image_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_image_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_image_leading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_image_trailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.68" />
+
+        <com.androidnetworking.widget.ANImageView
+            android:id="@+id/place_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/place_image_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/place_image_trailing"
+            app:layout_constraintStart_toStartOf="@+id/place_image_leading"
+            app:layout_constraintTop_toBottomOf="@+id/place_image_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/content_leading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/content_trailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/content_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/content_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <TextView
+            android:id="@+id/place_title"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="Place Title"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/place_title_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/content_trailing"
+            app:layout_constraintStart_toStartOf="@+id/content_leading"
+            app:layout_constraintTop_toBottomOf="@+id/content_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_title_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.39" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_address_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45" />
+
+        <TextView
+            android:id="@+id/place_address"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="1234 Address Lane, Denver"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/place_address_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/content_trailing"
+            app:layout_constraintStart_toStartOf="@+id/content_leading"
+            app:layout_constraintTop_toTopOf="@+id/place_address_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_address_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_phone_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.52" />
+
+        <TextView
+            android:id="@+id/place_phone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/placeholder_location_phone"
+            android:textAlignment="center"
+            android:textColor="@color/toolbarButtonColor"
+            app:layout_constraintBottom_toTopOf="@+id/place_phone_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/content_trailing"
+            app:layout_constraintStart_toStartOf="@+id/content_leading"
+            app:layout_constraintTop_toTopOf="@+id/place_address_bottom" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/place_phone_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.57" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/sep_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.62" />
+
+        <ImageView
+            android:id="@+id/sep"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_view_content_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/sep_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/content_trailing"
+            app:layout_constraintStart_toStartOf="@+id/content_leading"
+            app:layout_constraintTop_toTopOf="@+id/sep_top"
+            app:srcCompat="@drawable/gen_separator" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/sep_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.63" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/additional_content_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/additional_content_mid_outer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/zone_type_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.68" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/zone_type_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.72" />
+
+        <TextView
+            android:id="@+id/zone_type"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/hospitals"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/zone_type_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/content_trailing"
+            app:layout_constraintStart_toStartOf="@+id/additional_content_mid_outer"
+            app:layout_constraintTop_toTopOf="@+id/zone_type_top" />
+
+        <TextView
+            android:id="@+id/zone_type_label"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/safety_zone_type"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/zone_type_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/additional_content_mid"
+            app:layout_constraintStart_toStartOf="@+id/content_leading"
+            app:layout_constraintTop_toTopOf="@+id/zone_type_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/zone_coords_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/zone_coords_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.79" />
+
+        <TextView
+            android:id="@+id/zone_coords_label"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/coordinates"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/zone_coords_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/additional_content_mid"
+            app:layout_constraintStart_toStartOf="@+id/content_leading"
+            app:layout_constraintTop_toTopOf="@+id/zone_coords_top" />
+
+        <TextView
+            android:id="@+id/zone_coords"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/placeholder_coords"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/zone_coords_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/content_trailing"
+            app:layout_constraintStart_toStartOf="@+id/additional_content_mid_outer"
+            app:layout_constraintTop_toTopOf="@+id/zone_coords_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/alerts_switch_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.87" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/alerts_switch_leading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/alerts_switch_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <Switch
+            android:id="@+id/alerts_switch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:checked="true"
+            android:splitTrack="false"
+            android:text="@string/alerts_on"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:thumb="@drawable/radius_slider_button"
+            android:trackTint="@color/espGreen"
+            app:layout_constraintBottom_toTopOf="@+id/content_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/place_image_trailing"
+            app:layout_constraintStart_toStartOf="@+id/place_image_leading"
+            app:layout_constraintTop_toTopOf="@+id/alerts_switch_top"
+            tools:checked="false" />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

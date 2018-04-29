@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/default_modal_width"
+    android:layout_height="@dimen/modal_dialog_alert_height"
+    android:background="@drawable/rounded_dialog_view">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightESPGrey">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/leading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/trailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1.0" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1.0" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/mid2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.39" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/buttons_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/ESPDialogButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:onClick="cancelDelete"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toTopOf="@+id/bottom"
+            app:layout_constraintEnd_toStartOf="@+id/mid"
+            app:layout_constraintStart_toStartOf="@+id/leading"
+            app:layout_constraintTop_toTopOf="@+id/buttons_top" />
+
+        <Button
+            android:id="@+id/delete_button"
+            style="@style/ESPDialogButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/espRed"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/bottom"
+            app:layout_constraintEnd_toStartOf="@+id/trailing"
+            app:layout_constraintStart_toStartOf="@+id/mid"
+            app:layout_constraintTop_toTopOf="@+id/buttons_top" />
+
+        <ImageView
+            android:contentDescription="@string/image_view_content_description"
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingBottom="@dimen/dialog_icon_padding"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/dialog_icon_padding"
+            android:paddingTop="@dimen/dialog_icon_padding"
+            app:layout_constraintBottom_toTopOf="@+id/buttons_top"
+            app:layout_constraintEnd_toStartOf="@+id/mid"
+            app:layout_constraintStart_toStartOf="@+id/leading"
+            app:layout_constraintTop_toTopOf="@+id/top"
+            app:srcCompat="@drawable/delete_icon" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingBottom="@dimen/dialog_title_padding"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/dialog_title_padding"
+            android:paddingTop="@dimen/dialog_title_padding"
+            android:text="@string/delete_account"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/delete_button"
+            app:layout_constraintEnd_toStartOf="@+id/trailing"
+            app:layout_constraintStart_toStartOf="@+id/mid2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
+

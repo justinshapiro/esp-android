@@ -1,0 +1,186 @@
+<resources>
+    <!-- App Name and Activity names -->
+    <string name="app_name">esp-mobile</string>
+
+    <!-- Placeholder Strings-->
+    <string name="name_placeholder">Justin Shapiro</string>
+    <string name="email_placeholder">justinshapiro88@gmail.com</string>
+
+    <!-- Content Descriptions -->
+    <string name="image_view_content_description"> </string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username or Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign In</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="login_title">Emergency Safety Proximity</string>
+    <string name="sign_in_with_facebook">Sign In with Facebook</string>
+    <string name="create_account"><u>Not registered? Sign up</u></string>
+
+    <!-- Strings related to Create Account -->
+    <string name="fb_sign_up_prompt">Sign Up with Facebook</string>
+    <string name="fill_out_info_prompt">Fill out the information below</string>
+    <string name="create_account_prompt">Create Account</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
+    <string name="first_name_field">First Name</string>
+    <string name="last_name_field">Last Name</string>
+    <string name="email_field">Email</string>
+    <string name="username_field">Username</string>
+    <string name="password_field">Password</string>
+    <string name="confirm_password_field">Confirm Password</string>
+    <string name="title_activity_menu">MenuActivity</string>
+
+    <!-- Strings related to Edit Profile -->
+    <string name="change_password">Change Password</string>
+
+    <!-- Strings related to Navigation Drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_contacts">Emergency Contacts</string>
+    <string name="menu_locations">Custom Locations</string>
+    <string name="menu_alerts">Non-Alertable Locations</string>
+    <string name="menu_log_out">Log Out</string>
+
+    <!-- Strings related to Safety Zones screen -->
+    <string name="radius">Radius</string>
+    <string name="_20mi">20mi</string>
+    <string name="google_maps_key">AIzaSyDN3kxrmaJKv88kLtESOSiHsq9lnPGeE-c</string>
+
+    <!-- Strings related to Alerts Activity -->
+    <string name="alerts_info">Locations that have been marked as non-alertable appear here. You can also use this screen to re-enable them.</string>
+    <string name="disable_alerts_button">Disable Alerts Globally</string>
+
+    <!-- Other strings -->
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_menu_navigation">MenuNavigationActivity</string>
+    <string name="title_activity_custom_locations">CustomLocationsActivity</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="re_enter_new_password">Re-enter New Password</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="change_profile_picture">Profile Picture</string>
+    <string name="your_information">Your Information</string>
+    <string name="update">Update</string>
+    <string name="account">Account</string>
+    <string name="log_out_no">No</string>
+    <string name="log_out_yes">Yes</string>
+    <string name="log_out">Log Out?</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="delete">Delete</string>
+    <string name="delete_account">Delete Account?</string>
+    <string name="log_out_no_q">Log Out</string>
+    <string name="emergency_contacts_prompt">Emergency Contacts:</string>
+    <string name="phone_placeholder">(303) 888–5283</string>
+    <string name="custom_locations_prompt">Custom Locations:</string>
+    <string name="non_alertable_locations_prompt">Non-Alertable Locations:</string>
+    <string name="add_custom_location_button_text">Add Custom Location…</string>
+    <string name="placeholder_address">2525 South Downing Street, Denver</string>
+    <string name="placeholder_location_phone"><u>(303) 778-1955</u></string>
+    <string name="placeholder_location_name">Porter Adventist Hospital</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="save">Save</string>
+    <string name="edit_contact_info">Please verify that the phone number is correct to ensure that this contact successfully receives notifications</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_welcome">Your feedback is very important to us. Please take a moment to discuss your thoughts about the app with us.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rate_our_app">Rate our app</string>
+    <string name="text_entry_description">Text Entry Description</string>
+    <string name="anything_you_don_t_like">Anything you don\'t like?</string>
+    <string name="tell_us_what_you_like_about_the_app">Tell us what you like about the app</string>
+    <string name="how_useful_do_you_find_the_app">How useful do you find the app?</string>
+    <string name="_10_out_of_10">10 out of 10</string>
+    <string name="rate_the_look_and_feel">Rate the look-and-feel</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <!-- Strings related to Feedback -->
+    <string name="save_exit"><![CDATA[Save & Exit]]></string>
+    <string name="_1a">Rate our app</string>
+    <string name="_1b">Tell us what you like about the app</string>
+    <string name="_1c">Anything you don\'t like?</string>
+    <string name="_1d">How useful do you find the app?</string>
+    <string name="_1e">Rate the overall look-and-feel</string>
+    <string name="_1f">Would you recommend this app to a friend?</string>
+    <string name="_2a">How long did it take you to create an account?</string>
+    <string name="_2b">Was creating an account intuitive?</string>
+    <string name="_2c">What did you like about this experience?</string>
+    <string name="_2d">Anything you didn\'t like?</string>
+    <string name="_2e">Rate the look-and-feel</string>
+    <string name="_3a">Did you find it easy to see the nearest safety-zone near you?</string>
+    <string name="_3b">Do you feel like a maximum radius of 20 miles is enough</string>
+    <string name="_3c">Tell us about any safety-zones near you that were not on the map</string>
+    <string name="_3d">Was there enough detail provided about each location?</string>
+    <string name="_3e">Do you feel like the safety-zone categories "Hospital", "Police" and "Fire" are enough?</string>
+    <string name="_3f">What did you like about this experience?</string>
+    <string name="_3g">Anything you didn\'t like?</string>
+    <string name="_3h">Rate the look-and-feel</string>
+    <string name="_4a">Was adding emergency contacts intuitive?</string>
+    <string name="_4b">Was creating alert groups from your emergency contacts intuitive?</string>
+    <string name="_4c">What did you like about this experience?</string>
+    <string name="_4d">Anything you didn\'t like?</string>
+    <string name="_4e">Rate the look-and-feel</string>
+    <string name="_5a">Was adding custom safety-zone locations intuitive?</string>
+    <string name="_5b">What did you like about this experience?</string>
+    <string name="_5c">Anything you don\'t like?</string>
+    <string name="_5d">Was marking locations as "non-alertable" an intuitive and smooth experience?</string>
+    <string name="_5e">Briefly describe your experience turing on/off alertable locations</string>
+    <string name="_5f">Rate the look-and-feel</string>
+    <string name="_6a">Did your emergency contacts receive a text message when you entered a safety-zone?</string>
+    <string name="_6b">Do you have any additional feedback regarding the emergency alert functionality?</string>
+    <string name="_6c">Before you submit your feedback, please go to Settings -> Battery. Under "Battery Usage" look for our app ("ESP"). Please report the battery usage percentage below. This information will be used so we can determine if any optimizations need to be made to preserve the battery life of your device in the future.</string>
+    <string name="exit">Exit</string>
+    <string name="thank_you_msg">The feedback you have submitted will help us in achieving our ultimate goal of delivering a stable, intuitive product that helps keep the general public safe during emergencies .</string>
+    <string name="hospitals">Hospital</string>
+    <string name="police">Police</string>
+    <string name="fire">Fire</string>
+    <string name="custom">Custom</string>
+    <string name="safety_zone_type">Safety-Zone Type:</string>
+    <string name="coordinates">Coordinates:</string>
+    <string name="placeholder_coords">39.72754, -104.99107</string>
+    <string name="alerts_on">Alerts On?</string>
+    <string name="enter_manually">Enter Manually</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="edit_contact_title">Edit emergency contact information</string>
+    <string name="add_emergency_contact_title">Provide emergency contact information</string>
+    <string name="add_location_prompt">Search for an address OR place a pin on the location that you would like to add and then click Done.</string>
+    <string name="reset">Reset</string>
+    <string name="done">Done</string>
+    <string name="add_location_title">Provide info about your new location</string>
+    <string name="selected_location">Selected Location:</string>
+    <string name="address">Address</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="edit">Edit</string>
+    <string name="test_user_id">00000000–0000–0000–0000–000000000000</string>
+    <string name="unknown_error">An unknown error has occurred</string>
+    <string name="invalid_credentials">The username or password is not correct</string>
+    <string name="account_created">Account created successfully</string>
+    <string name="alert_group_prompt">Drag your emergency contacts from the top section to the bottom section to form an alert group</string>
+    <string name="your_emergency_contacts">Your Emergency Contacts:</string>
+    <string name="current_alert_group">Current Alert Group:</string>
+    <string name="non_grouped_contacts_show_up_here">Non-Grouped Contacts Show Up Here</string>
+    <string name="alert_group_contacts_go_here">Alert Group Contacts Go Here</string>
+    <string name="save_button">Save</string>
+    <string name="add_emergency_contact">Add Emergency Contact…</string>
+    <string name="enabled">Enabled?</string>
+    <string name="go_to_distress_mode">Go to Distress Mode</string>
+    <string name="coming_soon">Coming Soon!</string>
+    <string name="error_message">An error occurred</string>
+    <string name="location_name_hint">Location Name</string>
+    <string name="description_optional_hint">Description (Optional)</string>
+    <string name="delete_account_no_q">Delete Account</string>
+    <string name="manage_alert_groups">Manage Alert Groups…</string>
+    <string name="radius_default">5 mi</string>
+    <string name="distress_mode">Distress Mode</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="espOrange">#ff9a38</color>
+    <color name="lightESPGrey">#ebebeb</color>
+    <color name="darkESPGrey">#797979</color>
+    <color name="mediumESPGrey">#cccccc</color>
+    <color name="toolbarButtonColor">#0433ff</color>
+    <color name="espRed">#e74c3d</color>
+    <color name="espGreen">#299e00</color>
+    <color name="fb_brand_color">#3B5998</color>
+    <color name="editTextGrayBorder">#bdbdbd</color>
+    <color name="espBlack">#000000</color>
+</resources>

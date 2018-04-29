@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.espmobile.esp_mobile">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- To send requests to the API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!--
+             There are three launch activities
+                1. SetupActivity: Chooses whether the first screen is Login or Safety Zones
+                2. LoginActivity: If the user does not have a cached session
+                3. SafetyZonesActivity: If the user has a valid session
+        -->
+        <activity
+            android:name=".SetupActivity"
+            android:enabled="true"
+            android:theme="@style/AppTheme.NoActionBarSplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:enabled="false"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".safety_zones.SafetyZonesActivity"
+            android:enabled="false"
+            android:label="Safety Zones Near You">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Non-Launching Activities -->
+        <activity
+            android:name=".login.CreateAccountActivity"
+            android:label="@string/create_account_prompt">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.login.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".profile.EditProfileActivity"
+            android:label="Edit Profile"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.safety_zones.SafetyZonesActivity" />
+        </activity>
+        <activity
+            android:name=".locations.CustomLocationsActivity"
+            android:label="@string/menu_locations">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.safety_zones.SafetyZonesActivity" />
+        </activity>
+        <activity
+            android:name=".contacts.EmergencyContactsActivity"
+            android:label="@string/menu_contacts">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.safety_zones.SafetyZonesActivity" />
+        </activity>
+        <activity
+            android:name=".alerts.AlertsActivity"
+            android:label="@string/menu_alerts">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.safety_zones.SafetyZonesActivity" />
+        </activity>
+        <activity
+            android:name=".contacts.AddContactActivity"
+            android:label="Add Contacts"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.contacts.EmergencyContactsActivity" />
+        </activity>
+        <activity
+            android:name=".feedback.ProvideFeedbackPage1Activity"
+            android:label="Provide Feedback"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.safety_zones.SafetyZonesActivity" />
+        </activity>
+        <activity
+            android:name=".feedback.ProvideFeedbackPage2Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.feedback.ProvideFeedbackPage1Activity" />
+        </activity>
+        <activity
+            android:name=".feedback.ProvideFeedbackPage3Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.feedback.ProvideFeedbackPage2Activity" />
+        </activity>
+        <activity
+            android:name=".feedback.ProvideFeedbackPage4Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.feedback.ProvideFeedbackPage3Activity" />
+        </activity>
+        <activity
+            android:name=".feedback.ProvideFeedbackPage5Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.feedback.ProvideFeedbackPage4Activity" />
+        </activity>
+        <activity
+            android:name=".feedback.ProvideFeedbackPage6Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.feedback.ProvideFeedbackPage5Activity" />
+        </activity>
+        <activity
+            android:name=".feedback.ProvideFeedbackFinishedActivity"
+            android:label="Feedback Received"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".locations.AddLocationActivity"
+            android:label="Add Custom Location">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.locations.CustomLocationsActivity" />
+        </activity>
+
+        <service
+            android:name=".LocationUpdateService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name=".GeofenceTransitionsIntentService" />
+
+        <activity
+            android:name=".contacts.AlertGroupsActivity"
+            android:label="Manage Alert Groups"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.espmobile.esp_mobile.contacts.EmergencyContactsActivity" />
+        </activity>
+    </application>
+
+</manifest>

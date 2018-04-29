@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/power_icon_orange"
+        android:width="@dimen/nav_icon_size"
+        android:height="@dimen/nav_icon_size"
+        android:top="@dimen/nav_section_icon_top"
+        android:left="@dimen/nav_section_icon_left"
+        android:right="@dimen/nav_section_icon_right"/>
+</layer-list >

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/email_icon_grey"
+        android:width="30dp"
+        android:height="30dp"
+        android:right="8dp"
+        android:left="-2dp"/>
+
+</layer-list >

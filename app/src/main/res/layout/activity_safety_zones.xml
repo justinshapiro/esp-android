@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.espmobile.esp_mobile.safety_zones.SafetyZonesActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:indeterminateTint="@color/espRed"
+        android:indeterminateTintMode="multiply"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518" />
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/radius_slider_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context="org.espmobile.esp_mobile.safety_zones.SafetyZonesActivity" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/radius_slider_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/darkESPGrey"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map">
+
+        <TextView
+            android:id="@+id/radius_label"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:autoSizeTextType="uniform"
+            android:paddingBottom="@dimen/radius_slider_padding"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="@dimen/radius_slider_padding"
+            android:text="@string/radius"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            tools:targetApi="o" />
+
+        <SeekBar
+            android:id="@+id/radius_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:max="19"
+            android:min="0"
+            android:progress="4"
+            android:progressTint="@color/espOrange"
+            android:thumb="@drawable/radius_slider_button"
+            tools:targetApi="o" />
+
+        <TextView
+            android:id="@+id/radius_val_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:autoSizeTextType="uniform"
+            android:paddingBottom="@dimen/radius_slider_padding"
+            android:paddingTop="@dimen/radius_slider_padding"
+            android:text="@string/radius_default"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            tools:targetApi="o" />
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/filter_leading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/filter_trailing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <ImageButton
+        android:id="@+id/filter_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/filter_black_filled"
+        android:contentDescription="@string/image_view_content_description"
+        android:onClick="filterButtonTapped"
+        android:tag="0"
+        app:layout_constraintBottom_toTopOf="@+id/filter_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/filter_trailing"
+        app:layout_constraintStart_toStartOf="@+id/filter_leading"
+        app:layout_constraintTop_toTopOf="@+id/filter_top" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/filter_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.84" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/filter_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.915" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/filter_content_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/filter_content_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/filter_content_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/filter_content_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.91" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/distress_mode_label_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/distress_mode_label_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/distress_mode_label_leading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/distress_mode_label_trailing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <LinearLayout
+        android:id="@+id/filter_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_border_view"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/filter_content_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/filter_content_end"
+        app:layout_constraintStart_toStartOf="@+id/filter_content_start"
+        app:layout_constraintTop_toBottomOf="@+id/filter_content_top">
+
+        <Button
+            android:id="@+id/hospitals_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/filter_button_bottom_margin"
+            android:layout_marginEnd="@dimen/filter_button_top_right_margin"
+            android:layout_marginStart="@dimen/filter_button_left_margin"
+            android:layout_marginTop="@dimen/filter_button_top_right_margin"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounded_button_orange"
+            android:onClick="filterContentButtonTapped"
+            android:paddingBottom="@dimen/filter_button_padding"
+            android:paddingEnd="@dimen/filter_button_padding"
+            android:paddingStart="@dimen/filter_button_padding"
+            android:paddingTop="@dimen/filter_button_padding"
+            android:tag="0"
+            android:text="@string/hospitals"
+            android:textAllCaps="false"
+            tools:targetApi="o"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/police_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/filter_button_bottom_margin"
+            android:layout_marginEnd="@dimen/filter_button_top_right_margin"
+            android:layout_marginStart="@dimen/filter_button_left_margin"
+            android:layout_marginTop="@dimen/filter_button_top_right_margin"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounded_button_orange"
+            android:onClick="filterContentButtonTapped"
+            android:paddingBottom="@dimen/filter_button_padding"
+            android:paddingEnd="@dimen/filter_button_padding"
+            android:paddingStart="@dimen/filter_button_padding"
+            android:paddingTop="@dimen/filter_button_padding"
+            android:tag="0"
+            android:text="@string/police"
+            android:textAllCaps="false"
+            tools:targetApi="o"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/fire_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/filter_button_bottom_margin"
+            android:layout_marginEnd="@dimen/filter_button_top_right_margin"
+            android:layout_marginStart="@dimen/filter_button_left_margin"
+            android:layout_marginTop="@dimen/filter_button_top_right_margin"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounded_button_orange"
+            android:onClick="filterContentButtonTapped"
+            android:paddingBottom="@dimen/filter_button_padding"
+            android:paddingEnd="@dimen/filter_button_padding"
+            android:paddingStart="@dimen/filter_button_padding"
+            android:paddingTop="@dimen/filter_button_padding"
+            android:tag="0"
+            android:text="@string/fire"
+            android:textAllCaps="false"
+            tools:targetApi="o"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/custom_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/filter_button_bottom_margin"
+            android:layout_marginEnd="@dimen/filter_button_top_right_margin"
+            android:layout_marginStart="@dimen/filter_button_left_margin"
+            android:layout_marginTop="@dimen/filter_button_top_right_margin"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/rounded_button_orange"
+            android:onClick="filterContentButtonTapped"
+            android:paddingBottom="@dimen/filter_button_padding"
+            android:paddingEnd="@dimen/filter_button_padding"
+            android:paddingStart="@dimen/filter_button_padding"
+            android:paddingTop="@dimen/filter_button_padding"
+            android:tag="0"
+            android:text="@string/custom"
+            android:textAllCaps="false"
+            tools:targetApi="o"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/distress_mode_label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/distress_mode"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="17sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/distress_mode_label_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/distress_mode_label_trailing"
+        app:layout_constraintStart_toStartOf="@+id/distress_mode_label_leading"
+        app:layout_constraintTop_toTopOf="@+id/distress_mode_label_top" />
+</android.support.constraint.ConstraintLayout>
+
+
+

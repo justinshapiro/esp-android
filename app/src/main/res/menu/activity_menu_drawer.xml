@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_profile"
+            android:icon="@drawable/person_icon_bold_scaled"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/menu_contacts"
+            android:icon="@drawable/phone_icon_bold_scaled"
+            android:title="@string/menu_contacts" />
+        <item
+            android:id="@+id/menu_locations"
+            android:icon="@drawable/location_marker_scaled"
+            android:title="@string/menu_locations" />
+        <item
+            android:id="@+id/menu_alerts"
+            android:icon="@drawable/alert_icon_scaled"
+            android:title="@string/menu_alerts" />
+    </group>
+
+    <!-- TODO: Give Feedback will appear here just as log out is-->
+
+</menu>

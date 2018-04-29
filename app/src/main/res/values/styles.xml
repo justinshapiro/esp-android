@@ -1,0 +1,158 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/lightESPGrey</item>
+        <item name="colorPrimaryDark">@color/lightESPGrey</item>
+        <item name="colorAccent">@android:color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarSplashScreen" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="statusBarStyle" parent="@android:style/Theme.DeviceDefault.Light" />
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Custom theme for navigation drawer items -->
+    <style name="NavigationItemTheme" parent="AppTheme">
+        <item name="listPreferredItemHeightSmall">@dimen/nav_item_height</item>
+        <item name="android:listDivider">@android:color/transparent</item>
+    </style>
+
+    <style name="ESPTextField" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edit_text_border_lightgray</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:paddingBottom">@dimen/text_field_padding</item>
+        <item name="android:paddingTop">@dimen/text_field_padding</item>
+        <item name="android:paddingLeft">@dimen/text_field_padding</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:autoSizeTextType" android:targetApi="o">uniform</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <style name="ESPUsernameField" parent="ESPTextField">
+        <item name="android:drawableLeft">@drawable/person_icon_scaled</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="ESPNameField" parent="ESPTextField">
+        <item name="android:drawableLeft">@drawable/person_icon_scaled</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+    <style name="ESPLocationField" parent="ESPTextField">
+        <item name="android:drawableLeft">@drawable/building_icon_scaled</item>
+        <item name="android:inputType">textPersonName</item>
+    </style>
+
+    <style name="ESPEmailField" parent="ESPTextField">
+        <item name="android:drawableLeft">@drawable/email_icon_scaled</item>
+        <item name="android:inputType">textEmailAddress</item>
+    </style>
+
+    <style name="ESPPasswordField" parent="ESPTextField">
+        <item name="android:drawableLeft">@drawable/key_icon_scaled</item>
+        <item name="android:inputType">textPassword</item>
+    </style>
+
+    <style name="ESPPhoneField" parent="ESPTextField">
+        <item name="android:drawableLeft">@drawable/phone_icon_scaled</item>
+        <item name="android:inputType">number</item>
+    </style>
+
+    <style name="ESPFeedbackField" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edit_text_border_black</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:inputType">textMultiLine</item>
+    </style>
+
+    <style name="ESPMultiLineEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edit_text_rounded_lightgray</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:inputType">textMultiLine</item>
+    </style>
+
+    <style name="ESPButton" parent="Widget.AppCompat.Button">
+        <item name="android:autoSizeTextType" android:targetApi="o">uniform</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">@dimen/button_text_padding</item>
+        <item name="android:paddingBottom">@dimen/button_text_padding</item>
+        <item name="android:paddingTop">@dimen/button_text_padding</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ESPSButtonSwipe" parent="ESPButton">
+        <item name="android:autoSizeTextType" android:targetApi="o">none</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/swipe_button_text_size</item>
+        <item name="android:layout_width">@dimen/swipe_button_width</item>
+        <item name="android:layout_height">@dimen/list_cell_height</item>
+    </style>
+
+    <style name="ESPButtonRed" parent="ESPButton">
+        <item name="android:background">@drawable/rounded_button_red</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ESPButtonOrange" parent="ESPButton">
+        <item name="android:background">@drawable/rounded_button_orange</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ESPButtonDarkGrey" parent="ESPButton">
+        <item name="android:background">@drawable/rounded_button_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ESPFacebookButton" parent="ESPButton">
+        <item name="android:background">@drawable/rounded_fb_button</item>
+        <item name="android:drawableLeft">@drawable/fb_icon_scaled</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Theme for alert dialog -->
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/lightESPGrey</item>
+        <item name="colorPrimaryDark">@color/darkESPGrey</item>
+        <item name="colorAccent">@android:color/black</item>
+        <item name="buttonBarButtonStyle">@style/ESPDialogButton</item>
+    </style>
+
+    <style name="ESPDialogButton" parent="ESPButton">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AlertText" parent="AlertTextAppearance.Text">
+        <item name="android:textColor">@color/espBlack</item>
+    </style>
+</resources>

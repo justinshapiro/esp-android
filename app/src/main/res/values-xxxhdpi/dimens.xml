@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dimens for xxhdpi devices (Nexus 6, ...) -->
+<resources>
+    <dimen name="button_text_padding">12dp</dimen>
+    <dimen name="text_field_padding">5dp</dimen>
+    <dimen name="dialog_icon_padding">34dp</dimen>
+    <dimen name="dialog_title_padding">49dp</dimen>
+
+    <dimen name="icon_size">27dp</dimen>
+    <dimen name="icon_size_large">34dp</dimen>
+    <dimen name="drawer_ic_size">26dp</dimen>
+
+    <dimen name="nav_item_height">65dp</dimen>
+    <dimen name="nav_header_height">170dp</dimen>
+    <dimen name="nav_icon_size">35dp</dimen>
+
+    <dimen name="modal_dialog_alert_height">175dp</dimen>
+    <dimen name="modal_dialog_small_height">320dp</dimen>
+    <dimen name="modal_dialog_large_height">450dp</dimen>
+    
+    <dimen name="nav_section_2_distance">446dp</dimen>
+    <dimen name="nav_section_3_distance">519dp</dimen>
+    <dimen name="nav_section_icon_left">16dp</dimen>
+    <dimen name="nav_section_icon_top">10dp</dimen>
+    <dimen name="nav_section_icon_right">23dp</dimen>
+
+    <dimen name="list_header_padding">3dp</dimen>
+    <dimen name="small_list_cell_height">60dp</dimen>
+    <dimen name="list_cell_height">75dp</dimen>
+    <dimen name="list_cell_header_height">24dp</dimen>
+
+    <dimen name="alerts_screen_label_padding">8dp</dimen>
+
+    <dimen name="nav_menu_bg_size">200dp</dimen>
+
+    <dimen name="radius_slider_padding">9dp</dimen>
+
+    <dimen name="map_callout_height">75dp</dimen>
+
+    <integer name="map_pin_width">127</integer>
+    <integer name="map_pin_height">158</integer>
+
+    <dimen name="filter_button_padding">8dp</dimen>
+    <dimen name="filter_button_bottom_margin">8dp</dimen>
+    <dimen name="filter_button_left_margin">5dp</dimen>
+    <dimen name="filter_button_top_right_margin">2dp</dimen>
+</resources>

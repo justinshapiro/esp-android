@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dimens for xhdpi devices (Nexus 4, ...) -->
+<resources>
+    <dimen name="button_text_padding">8dp</dimen>
+    <dimen name="text_field_padding">2dp</dimen>
+    <dimen name="dialog_icon_padding">24dp</dimen>
+    <dimen name="dialog_title_padding">30dp</dimen>
+
+    <dimen name="icon_size">23dp</dimen>
+    <dimen name="icon_size_large">29dp</dimen>
+    <dimen name="drawer_ic_size">22dp</dimen>
+
+    <dimen name="nav_item_height">51dp</dimen>
+    <dimen name="nav_header_height">166dp</dimen>
+    <dimen name="nav_icon_size">26dp</dimen>
+
+    <dimen name="modal_dialog_alert_height">125dp</dimen>
+    <dimen name="modal_dialog_small_height">280dp</dimen>
+    <dimen name="modal_dialog_large_height">450dp</dimen>
+    <dimen name="modal_dialog_large_width">370dp</dimen>
+
+    <dimen name="nav_section_2_distance">386dp</dimen>
+    <dimen name="nav_section_3_distance">448dp</dimen>
+    <dimen name="nav_section_icon_left">16dp</dimen>
+    <dimen name="nav_section_icon_top">10dp</dimen>
+    <dimen name="nav_section_icon_right">26dp</dimen>
+
+    <dimen name="list_header_padding">2dp</dimen>
+    <dimen name="small_list_cell_height">55dp</dimen>
+    <dimen name="list_cell_height">65dp</dimen>
+    <dimen name="list_cell_header_height">20dp</dimen>
+
+    <dimen name="alerts_screen_label_padding">9dp</dimen>
+
+    <dimen name="distress_button_text_size">10sp</dimen>
+
+    <dimen name="add_emergency_contact_button_height">69dp</dimen>
+    <dimen name="add_emergrncy_contact_button_padding">8dp</dimen>
+
+    <dimen name="nav_menu_bg_size">160dp</dimen>
+
+    <dimen name="radius_slider_padding">8dp</dimen>
+
+    <dimen name="map_callout_height">80dp</dimen>
+
+    <integer name="map_pin_width">95</integer>
+    <integer name="map_pin_height">120</integer>
+
+    <dimen name="text_by_icon_side_padding">14dp</dimen>
+    <dimen name="text_by_icon_top_padding">5dp</dimen>
+
+    <dimen name="filter_button_padding">8dp</dimen>
+    <dimen name="filter_button_bottom_margin">8dp</dimen>
+    <dimen name="filter_button_left_margin">5dp</dimen>
+    <dimen name="filter_button_top_right_margin">2dp</dimen>
+</resources>

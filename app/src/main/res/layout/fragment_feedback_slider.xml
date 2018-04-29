@@ -1,0 +1,79 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    tools:context="org.espmobile.esp_mobile.feedback.FeedbackSliderFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/feedback_slider_sep"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:contentDescription="@string/image_view_content_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gen_separator"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/slider_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/how_useful_do_you_find_the_app"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/feedback_slider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:max="9"
+            android:min="0"
+            android:progress="9"
+            android:progressTint="@color/espOrange"
+            android:thumb="@drawable/radius_slider_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_title" />
+
+        <TextView
+            android:id="@+id/slider_value_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/_10_out_of_10"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedback_slider" />
+
+        <ImageView
+            android:id="@+id/feedback_slider_sep2"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/image_view_content_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gen_separator"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_value_text" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

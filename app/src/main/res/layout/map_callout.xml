@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="@dimen/map_callout_height"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:background="@drawable/rounded_border_view"
+    android:orientation="horizontal">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/location_icon_trailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight=".3"
+            android:adjustViewBounds="true"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:src="@drawable/gen_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/location_icon_trailing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/name_label_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/placeholder_location_name"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/name_label_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/info_button_leading"
+            app:layout_constraintStart_toStartOf="@+id/location_icon_trailing"
+            app:layout_constraintTop_toTopOf="@id/name_label_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/name_label_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.38" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/phone_label_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <TextView
+            android:id="@+id/phone_label"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/placeholder_location_phone"
+            android:textColor="@color/toolbarButtonColor"
+            app:layout_constraintBottom_toTopOf="@+id/phone_label_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/info_button_leading"
+            app:layout_constraintStart_toStartOf="@+id/location_icon_trailing"
+            app:layout_constraintTop_toTopOf="@+id/phone_label_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/phone_label_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/address_label_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="@android:color/black"
+            android:autoSizeTextType="uniform"
+            android:text="@string/placeholder_address"
+            app:layout_constraintBottom_toTopOf="@+id/address_label_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/info_button_leading"
+            app:layout_constraintStart_toStartOf="@+id/location_icon_trailing"
+            app:layout_constraintTop_toBottomOf="@id/address_label_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/address_label_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <Button
+            android:id="@+id/info_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight=".3"
+            android:background="@drawable/info_icon"
+            android:backgroundTint="@color/espRed"
+            app:layout_constraintBottom_toBottomOf="@id/info_button_bottom"
+            app:layout_constraintEnd_toEndOf="@id/info_button_trailing"
+            app:layout_constraintStart_toStartOf="@+id/info_button_leading"
+            app:layout_constraintTop_toTopOf="@id/info_button_top" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/info_button_leading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.88" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/info_button_trailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/info_button_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/info_button_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67" />
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

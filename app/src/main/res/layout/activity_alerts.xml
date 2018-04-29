@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightESPGrey"
+    tools:context="org.espmobile.esp_mobile.alerts.AlertsActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:indeterminateTint="@color/espRed"
+        android:indeterminateTintMode="multiply"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha=".5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_bg_trailing"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/image_bg_leading"
+        app:layout_constraintTop_toTopOf="@+id/image_bg_top"
+        app:srcCompat="@drawable/esp_logo_black" />
+
+    <ImageView
+        android:id="@+id/info_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/alerts_info_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/image_bg_leading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info_icon" />
+
+    <TextView
+        android:id="@+id/alerts_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:lineSpacingExtra="3sp"
+        android:paddingBottom="@dimen/alerts_screen_info_padding"
+        android:paddingLeft="@dimen/alerts_screen_info_padding"
+        android:paddingTop="@dimen/alerts_screen_info_padding"
+        android:text="@string/alerts_info"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/alerts_info_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/image_bg_leading"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_locations_prompt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/non_alertable_locations_prompt"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:paddingBottom="@dimen/list_header_padding"
+        android:paddingLeft="8dp"
+        android:paddingTop="@dimen/list_header_padding"
+        app:layout_constraintBottom_toTopOf="@+id/alerts_list_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/alerts_switch_bottom" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/alerts_switch_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/alerts_info_bottom">
+
+        <TextView
+            android:id="@+id/disable_alerts_switch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:paddingBottom="@dimen/alerts_screen_label_padding"
+            android:paddingLeft="@dimen/alerts_screen_label_padding"
+            android:paddingTop="@dimen/alerts_screen_label_padding"
+            android:text="@string/disable_alerts_button"
+            android:textColor="@android:color/black" />
+
+        <Switch
+            android:id="@+id/alerts_disable_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:checked="false"
+            android:maxHeight="20dp"
+            android:thumbTint="@android:color/white"
+            android:trackTint="@color/espRed" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvAlerts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/alerts_list_top" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/image_bg_leading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/image_bg_trailing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/image_bg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/alerts_info_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/alerts_switch_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/alerts_list_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+</android.support.constraint.ConstraintLayout>

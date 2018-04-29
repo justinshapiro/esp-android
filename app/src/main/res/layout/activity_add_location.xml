@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightESPGrey"
+    tools:context="org.espmobile.esp_mobile.locations.AddLocationActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:indeterminateTint="@color/espRed"
+        android:indeterminateTintMode="multiply"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/info_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.18" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/search_bar_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/buttons_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.91" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/info_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/info_icon_leading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/info_icon_trailing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.28" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/info_text_leading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.32" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/info_text_trailing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/pin_leading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/pin_trailing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.56" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/pin_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/map_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <ImageView
+        android:id="@+id/info_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/image_view_content_description"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/info_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/info_icon_trailing"
+        app:layout_constraintStart_toStartOf="@+id/info_icon_leading"
+        app:layout_constraintTop_toTopOf="@+id/info_top"
+        app:srcCompat="@drawable/info_icon" />
+
+    <TextView
+        android:id="@+id/add_location_prompt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:paddingBottom="3dp"
+        android:paddingTop="3sp"
+        android:text="@string/add_location_prompt"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/info_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/info_text_trailing"
+        app:layout_constraintStart_toStartOf="@+id/info_text_leading"
+        app:layout_constraintTop_toTopOf="@+id/info_top"
+        tools:targetApi="o" />
+
+    <fragment
+        android:id="@+id/map2"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttons_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/search_bar_bottom"
+        tools:context="org.espmobile.esp_mobile.locations.AddLocationActivity" />
+
+    <fragment
+        android:id="@+id/search_results_fragment"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/map2"
+        app:layout_constraintEnd_toEndOf="@+id/map2"
+        app:layout_constraintStart_toStartOf="@+id/map2"
+        app:layout_constraintTop_toTopOf="@+id/info_bottom" />
+
+    <Button
+        android:id="@+id/reset_button"
+        style="@style/ESPDialogButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@android:color/white"
+        android:onClick="resetButtonClicked"
+        android:text="@string/reset"
+        android:textColor="@color/alert_default_error_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttons_top"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/done_button"
+        style="@style/ESPDialogButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/espOrange"
+        android:onClick="addLocation"
+        android:text="@string/done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mid"
+        app:layout_constraintTop_toTopOf="@+id/buttons_top"
+        tools:targetApi="o" />
+
+    <ImageView
+        android:contentDescription="@string/image_view_content_description"
+        android:id="@+id/drop_pin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/map_mid"
+        app:layout_constraintEnd_toStartOf="@+id/pin_trailing"
+        app:layout_constraintStart_toStartOf="@+id/pin_leading"
+        app:layout_constraintTop_toTopOf="@+id/pin_top"
+        app:srcCompat="@drawable/map_pin" />
+
+</android.support.constraint.ConstraintLayout>
