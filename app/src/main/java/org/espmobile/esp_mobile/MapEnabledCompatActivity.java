@@ -50,13 +50,15 @@ public abstract class MapEnabledCompatActivity extends AppCompatActivity
             Manifest.permission.ACCESS_FINE_LOCATION
         );
 
-        if (currentPermission == PackageManager.PERMISSION_GRANTED) {
-            LocationServices.FusedLocationApi.requestLocationUpdates(
-                mGoogleApiClient,
-                mLocationRequest,
-                this
-            );
-        }
+       if (mGoogleApiClient.isConnected()) {
+           if (currentPermission == PackageManager.PERMISSION_GRANTED) {
+               LocationServices.FusedLocationApi.requestLocationUpdates(
+                       mGoogleApiClient,
+                       mLocationRequest,
+                       this
+               );
+           }
+       }
     }
 
     @Override

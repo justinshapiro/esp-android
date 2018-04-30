@@ -192,7 +192,7 @@ public abstract class MenuNavigationActivity extends MapEnabledCompatActivity
         ESPMobileAPI.logout(this, new ParsedRequestListener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-
+                logOutDialog.dismiss();
             }
 
             @Override
