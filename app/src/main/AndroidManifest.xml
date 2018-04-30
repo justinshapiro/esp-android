@@ -33,7 +33,7 @@
             android:value="@string/google_maps_key" />
 
         <!--
-             There are three launch activities
+             There are three launch activities (Beta Release #1)
                 1. SetupActivity: Chooses whether the first screen is Login or Safety Zones
                 2. LoginActivity: If the user does not have a cached session
                 3. SafetyZonesActivity: If the user has a valid session
