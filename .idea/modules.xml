@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\gamma\Desktop\esp-android\app\app.iml" filepath="C:\Users\gamma\Desktop\esp-android\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/esp-android.iml" filepath="$PROJECT_DIR$/esp-android.iml" />
-      <module fileurl="file://C:\Users\gamma\Desktop\esp-android\esp-client.iml" filepath="C:\Users\gamma\Desktop\esp-android\esp-client.iml" />
+      <module fileurl="file://C:\Users\gamma\Desktop\esp-android\esp-android.iml" filepath="C:\Users\gamma\Desktop\esp-android\esp-android.iml" />
     </modules>
   </component>
 </project>

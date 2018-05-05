@@ -51,6 +51,7 @@
         <activity
             android:name=".login.LoginActivity"
             android:enabled="false"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -61,6 +62,7 @@
         <activity
             android:name=".safety_zones.SafetyZonesActivity"
             android:enabled="false"
+            android:screenOrientation="portrait"
             android:label="Safety Zones Near You">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -72,6 +74,7 @@
         <!-- Non-Launching Activities -->
         <activity
             android:name=".login.CreateAccountActivity"
+            android:screenOrientation="portrait"
             android:label="@string/create_account_prompt">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -79,6 +82,7 @@
         </activity>
         <activity
             android:name=".profile.EditProfileActivity"
+            android:screenOrientation="portrait"
             android:label="Edit Profile"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -87,6 +91,7 @@
         </activity>
         <activity
             android:name=".locations.CustomLocationsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/menu_locations">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -94,6 +99,7 @@
         </activity>
         <activity
             android:name=".contacts.EmergencyContactsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/menu_contacts">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -101,6 +107,7 @@
         </activity>
         <activity
             android:name=".alerts.AlertsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/menu_alerts">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -109,6 +116,7 @@
         <activity
             android:name=".contacts.AddContactActivity"
             android:label="Add Contacts"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan">
             <meta-data
@@ -118,6 +126,7 @@
         <activity
             android:name=".feedback.ProvideFeedbackPage1Activity"
             android:label="Provide Feedback"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -125,6 +134,7 @@
         </activity>
         <activity
             android:name=".feedback.ProvideFeedbackPage2Activity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -132,6 +142,7 @@
         </activity>
         <activity
             android:name=".feedback.ProvideFeedbackPage3Activity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -139,6 +150,7 @@
         </activity>
         <activity
             android:name=".feedback.ProvideFeedbackPage4Activity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -146,6 +158,7 @@
         </activity>
         <activity
             android:name=".feedback.ProvideFeedbackPage5Activity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -153,6 +166,7 @@
         </activity>
         <activity
             android:name=".feedback.ProvideFeedbackPage6Activity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -160,10 +174,12 @@
         </activity>
         <activity
             android:name=".feedback.ProvideFeedbackFinishedActivity"
+            android:screenOrientation="portrait"
             android:label="Feedback Received"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".locations.AddLocationActivity"
+            android:screenOrientation="portrait"
             android:label="Add Custom Location">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -177,6 +193,7 @@
 
         <activity
             android:name=".contacts.AlertGroupsActivity"
+            android:screenOrientation="portrait"
             android:label="Manage Alert Groups"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

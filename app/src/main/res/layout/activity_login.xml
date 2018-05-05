@@ -64,7 +64,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.89" />
+        app:layout_constraintGuide_percent="0.82" />
 
     <ImageView
         android:id="@+id/login_area"
@@ -235,20 +235,22 @@
         android:clickable="true"
         android:focusable="true"
         android:onClick="goToCreateAccount"
-        android:text="@string/create_account"
+        android:text="Not registered? Click here to sign up"
         android:textAlignment="center"
         android:textColor="#8a8a8a"
         app:layout_constraintBottom_toTopOf="@id/bottom"
         app:layout_constraintEnd_toEndOf="@id/inner_trailing"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/inner_leading"
-        app:layout_constraintTop_toTopOf="@+id/create_account_prompt_top" />
+        app:layout_constraintTop_toTopOf="@+id/create_account_prompt_top"
+        app:layout_constraintVertical_bias="0.0" />
 
     <android.support.constraint.Guideline
         android:id="@+id/create_account_prompt_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.86" />
+        app:layout_constraintGuide_percent="0.79" />
 
     <android.support.constraint.Guideline
         android:id="@+id/distress_button_leading"

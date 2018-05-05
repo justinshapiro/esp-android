@@ -162,12 +162,26 @@ public class AddLocationActivity extends MapEnabledCompatActivity {
     }
 
     public void resetButtonClicked(View v) {
-        LatLng currentLocation = new LatLng(
-            mLastLocation.getLatitude(),
-            mLastLocation.getLongitude()
-        );
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        Criteria criteria = new Criteria();
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
 
-        mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 11));
+        if (locationManager != null) {
+            android.location.Location location = locationManager.getLastKnownLocation(locationManager.getBestProvider(criteria, false));
+            if (location != null) {
+                double latitude = location.getLatitude();
+                double longitude = location.getLongitude();
+
+                LatLng latLng = new LatLng(latitude, longitude);
+                MarkerOptions markerOptions = new MarkerOptions();
+                markerOptions.position(latLng);
+                markerOptions.title("Current Position");
+                mGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 11));
+            }
+        }
     }
 
     public void finishWithMessage() {
